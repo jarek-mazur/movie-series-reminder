@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        .wrapper {
+            font-size: 1em;
+            margin: 10px;
+        }
+
+        .wrapper input {
+            margin-left: 10px;
+            background-color: unset;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8em;
+        }
+        </style>
+    </head>
+    <body>
+        <h3> New series</h3>
+        <form id="addSeriesForm">
+                <fieldset>                
+            Title: <input id="newTitle" type="text">
+            Link: <input id="newLink" type="text">
+            Eposodes left: <input id="newLength" type="text">
+            Premiere day: 
+            <select id="newPremiere" type="text"> 
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+            <input type="submit" value='Add'>
+        </fieldset>
+        </form>
+        <div id="currentList">
+        <h3>Your series:</h3>
+        <h5>(click on 'X' to remove from list)</h5>
+        </div>
+        <script src="options.js" ></script>
+    <body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body {
+            height: auto;
+            width: 250px
+        }
+        .seriesButton {
+            box-shadow: 0px 1px 0px 0px #fff6af;
+            background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+            background-color: #ffec64;
+            border-radius: 6px;
+            border: 1px solid #ffaa22;
+            display: inline-block;
+            cursor: pointer;
+            color: #333333;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 6px 24px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #ffee66;
+        }
+        .seriesButton:hover {
+            background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+            background-color: #ffab23;
+        }
+        .seriesButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .newEpisode {
+            box-shadow:inset 0px 1px 0px 0px #caefab;
+            background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811',GradientType=0);
+            background-color:#77d42a;
+            border-radius:6px;
+            border:1px solid #268a16;
+            display:inline-block;
+            cursor:pointer;
+            color:#306108;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #aade7c;
+        }
+        .newEpisode:hover {
+            background:linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a',GradientType=0);
+            background-color:#5cb811;
+        }
+        .newEpisode:active {
+            position:relative;
+            top:1px;
+        }
+
+        .endSeries {
+            box-shadow:inset 0px 1px 0px 0px #f5978e;
+            background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+            background-color:#f24537;
+            border-radius:6px;
+            border:1px solid #d02718;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #810e05;
+        }
+        .endSeries:hover {
+            background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+            background-color:#c62d1f;
+        }
+        .endSeries:active {
+            position:relative;
+            top:1px;
+        }
+
+        #moviesList button {
+            width: 90%;
+            height: 30px;
+            display: block;
+            margin: 5%;
+        }
+
+        </style>
+    </head>
+    <body>
+        <h3> Wtyczka
+        </h3>
+        <div id="moviesList">
+
+        </div>
+        <script src="popup.js" ></script>
+    </body>
+</html>
