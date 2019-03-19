@@ -1,7 +1,7 @@
 {
-    "name": "Series checker",
+    "name": "Movie Series reminder",
     "version": "1.0",
-    "description": "do zrobienia",
+    "description": "This extension will not let you forget about the new episode of your favorite series",
     "permissions": ["storage"],
     "background": {
         "scripts": ["background.js"],
