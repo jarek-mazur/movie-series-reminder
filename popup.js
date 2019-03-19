@@ -33,7 +33,7 @@ function renderList (seriesList) {
         const button = document.createElement('button')
         button.classList.add('seriesButton')
         status === 'new' ? button.classList.add('newEpisode') : status === 'end' && button.classList.add('endSeries')
-        button.innerText = `${title}/${status}`
+        button.innerText = `${title}`
         button.onclick = () => goToLink(link, seriesList, index, premiereDays, status) 
 
         moviesList.appendChild(button)
