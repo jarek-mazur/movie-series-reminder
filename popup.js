@@ -54,9 +54,15 @@ function goToLink (link, seriesList, index, premiereDays, status) {
         } else {
             newMovies[index].status = "watched";
         }
+
+        const statuses = newMovies.map((movie) => movie.status);
+        statuses.indexOf('new') === -1 && setGreyIcon();
+
         saveSyncData(newMovies, () => moveToUrl(link))
     }
 }
 
+
+const setGreyIcon = () => chrome.browserAction.setIcon({path: "images/button_grey_play.png"})
 function saveSyncData (data, callback) { chrome.storage.sync.set({"movies": data}, callback())}
 function moveToUrl (link) { chrome.tabs.update({url: link}) }  
