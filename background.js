@@ -1,6 +1,6 @@
-// chrome.runtime.onInstalled.addListener(function() {
-//   chrome.storage.sync.set("movies", [])
-// });
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.storage.sync.set("movies", [])
+});
 
 chrome.tabs.onCreated.addListener((tab) => {
   chrome.storage.sync.get("movies", ({movies}) => {
