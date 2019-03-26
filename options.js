@@ -1,9 +1,10 @@
 const form = document.getElementById('addSeriesForm');
-const title = document.getElementById('newTitle')
-const link = document.getElementById('newLink')
-const episodesLeft = document.getElementById('newLength')
-const premiereDay = document.getElementById('newPremiere')
-const optionsList = document.getElementById('currentList')
+const title = document.getElementById('newTitle');
+const link = document.getElementById('newLink');
+const episodesLeft = document.getElementById('newLength') || 1;
+const premiereDay = document.getElementById('newPremiere');
+const premiereHour = document.getElementById('premiereHour');
+const optionsList = document.getElementById('currentList');
 let currentList = []
 
 const getDayDifference = (currentDay, premiereWeekDay) => {
@@ -63,12 +64,18 @@ const weekMap = {
 
 form.onsubmit = () => {
     const date = new Date();
+    const currentHour = date.getHours();
     const startCurrentDay = Date.parse(`${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`)
     const currentDay = date.getDay();
     const premiereWeekDay = weekMap[premiereDay.value]
+    const premiereHourValue = premiereHour.value > 23 ? 0 : +premiereHour.value || 0;
     const multiplier = getDayDifference(currentDay, premiereWeekDay)
-    const firstPremiere = startCurrentDay + multiplier * 86400000;
+    const itWasToday = multiplier === 0 && currentHour > premiereHourValue 
+    let firstPremiere = startCurrentDay + multiplier * 86400000 + premiereHourValue * 3600000;
     const oneWeekInMs = 7 * 86400000;
+    if (itWasToday) {
+        firstPremiere += oneWeekInMs
+    } 
     const premiereDays = [];
 
     for (let i = 0; i < episodesLeft.value; i++) {

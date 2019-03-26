@@ -15,6 +15,13 @@
             cursor: pointer;
             font-size: 0.8em;
         }
+        input, select {
+            margin-right: 10px;
+        }
+
+        #premiereHour {
+            max-width: 40px;
+        }
         </style>
     </head>
     <body>
@@ -34,6 +41,7 @@
                 <option>Saturday</option>
                 <option>Sunday</option>
             </select>
+            Premiere hour: <input id='premiereHour' type="number"> 
             <input type="submit" value='Add'>
         </fieldset>
         </form>

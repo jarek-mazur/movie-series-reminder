@@ -43,7 +43,7 @@ function renderList (seriesList) {
 function goToLink (link, seriesList, index, premiereDays, status) {
     const newMovies = [...seriesList];
     const now = Date.now();
-
+debugger
     if (status === 'end') {
         moveToUrl(link)
     } else {
@@ -65,4 +65,4 @@ function goToLink (link, seriesList, index, premiereDays, status) {
 
 const setGreyIcon = () => chrome.browserAction.setIcon({path: "images/button_grey_play.png"})
 function saveSyncData (data, callback) { chrome.storage.sync.set({"movies": data}, callback())}
-function moveToUrl (link) { chrome.tabs.update({url: link}) }  
+function moveToUrl (link) { link && chrome.tabs.update({url: link}) }  
